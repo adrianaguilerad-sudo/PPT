@@ -1,3 +1,0 @@
-cd C:\Users\Adrian\Dropbox\Portfolio                                  
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process                                
-.venv\Scripts\activate  
