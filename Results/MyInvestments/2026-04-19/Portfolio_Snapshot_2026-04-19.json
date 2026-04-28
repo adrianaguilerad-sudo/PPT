@@ -1,0 +1,131 @@
+{
+    "timestamp": "2026-04-19 16:28:26",
+    "assets": [
+        "IDR.MC",
+        "EGLN.L",
+        "BTC-EUR",
+        "JNJ.DE",
+        "FOXA",
+        "FOX",
+        "QLT.L",
+        "DIA.MC"
+    ],
+    "weights": [
+        0.15347885402455988,
+        0.14529331514324687,
+        0.27694406548431727,
+        0.2482696689883678,
+        0.043845393003728764,
+        0.022462289963237337,
+        0.017371350389215286,
+        0.09233506300332683
+    ],
+    "detailed_investments": {
+        "IDR.MC": {
+            "total_invested": 9.549694368615746e-12,
+            "total_shares": 8.187773062156836,
+            "transaction_history": [
+                {
+                    "date": "2026-04-19",
+                    "amount": 9.549694368615746e-12,
+                    "price_per_share": 54.959999084472656,
+                    "shares_bought": 1.7375717845151374e-13
+                }
+            ]
+        },
+        "EGLN.L": {
+            "total_invested": -1.7053025658242404e-13,
+            "total_shares": 5.3210094053303205,
+            "transaction_history": [
+                {
+                    "date": "2026-04-19",
+                    "amount": -1.7053025658242404e-13,
+                    "price_per_share": 80.05999755859375,
+                    "shares_bought": -2.130030749221764e-15
+                }
+            ]
+        },
+        "BTC-EUR": {
+            "total_invested": 1.8189894035458565e-11,
+            "total_shares": 0.012585571009013467,
+            "transaction_history": [
+                {
+                    "date": "2026-04-19",
+                    "amount": 1.8189894035458565e-11,
+                    "price_per_share": 64518.328125,
+                    "shares_bought": 2.819337475735088e-16
+                }
+            ]
+        },
+        "JNJ.DE": {
+            "total_invested": 483.92666947389444,
+            "total_shares": 3.6608664397525033,
+            "transaction_history": [
+                {
+                    "date": "2026-04-19",
+                    "amount": 483.92666947389444,
+                    "price_per_share": 198.83999633789062,
+                    "shares_bought": 2.433749136926926
+                }
+            ]
+        },
+        "FOXA": {
+            "total_invested": 128.55469228693275,
+            "total_shares": 1.9756368970316471,
+            "transaction_history": [
+                {
+                    "date": "2026-04-19",
+                    "amount": 128.55469228693275,
+                    "price_per_share": 65.06999969482422,
+                    "shares_bought": 1.9756368970316471
+                }
+            ]
+        },
+        "FOX": {
+            "total_invested": 65.85943417221188,
+            "total_shares": 1.1252252784175276,
+            "transaction_history": [
+                {
+                    "date": "2026-04-19",
+                    "amount": 65.85943417221188,
+                    "price_per_share": 58.529998779296875,
+                    "shares_bought": 1.1252252784175276
+                }
+            ]
+        },
+        "QLT.L": {
+            "total_invested": 50.93279934117922,
+            "total_shares": 0.27546133597870087,
+            "transaction_history": [
+                {
+                    "date": "2026-04-19",
+                    "amount": 50.93279934117922,
+                    "price_per_share": 184.89999389648438,
+                    "shares_bought": 0.27546133597870087
+                }
+            ]
+        },
+        "DIA.MC": {
+            "total_invested": 270.72640472575426,
+            "total_shares": 6.415317531546337,
+            "transaction_history": [
+                {
+                    "date": "2026-04-19",
+                    "amount": 270.72640472575426,
+                    "price_per_share": 42.20000076293945,
+                    "shares_bought": 6.415317531546337
+                }
+            ]
+        }
+    },
+    "current_prices_at_execution": {
+        "FOX": 58.529998779296875,
+        "FOXA": 65.06999969482422,
+        "JNJ.DE": 198.83999633789062,
+        "QLT.L": 184.89999389648438,
+        "DIA.MC": 42.20000076293945,
+        "IDR.MC": 54.959999084472656,
+        "EGLN.L": 80.05999755859375,
+        "BTC-EUR": 64518.328125
+    }
+}

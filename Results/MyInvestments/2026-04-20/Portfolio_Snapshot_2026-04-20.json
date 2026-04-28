@@ -1,0 +1,116 @@
+{
+    "timestamp": "2026-04-20 21:59:17",
+    "assets": [
+        "IDR.MC",
+        "EGLN.L",
+        "BTC-EUR",
+        "JNJ.DE",
+        "SDR.L",
+        "ELE.MC",
+        "DIA.MC"
+    ],
+    "weights": [
+        0.1534788540245558,
+        0.14529331514324864,
+        0.27694406548430955,
+        0.13703712577476318,
+        0.10028300318099069,
+        0.10720749494452747,
+        0.07975614144760469
+    ],
+    "detailed_investments": {
+        "IDR.MC": {
+            "total_invested": -2.3874235921539366e-12,
+            "total_shares": 8.18777306215662,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": -2.3874235921539366e-12,
+                    "price_per_share": 54.959999084472656,
+                    "shares_bought": -4.3439294612878435e-14
+                }
+            ]
+        },
+        "EGLN.L": {
+            "total_invested": 5.002220859751105e-12,
+            "total_shares": 5.3210094053303845,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": 5.002220859751105e-12,
+                    "price_per_share": 80.05999755859375,
+                    "shares_bought": 6.248090197717175e-14
+                }
+            ]
+        },
+        "BTC-EUR": {
+            "total_invested": -4.433786671143025e-12,
+            "total_shares": 0.01285624051075149,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": -4.433786671143025e-12,
+                    "price_per_share": 63159.98828125,
+                    "shares_bought": -7.019929534184638e-17
+                }
+            ]
+        },
+        "JNJ.DE": {
+            "total_invested": 157.79285277160562,
+            "total_shares": 2.020684269621668,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": 157.79285277160562,
+                    "price_per_share": 198.83999633789062,
+                    "shares_bought": 0.7935669667960906
+                }
+            ]
+        },
+        "SDR.L": {
+            "total_invested": 294.0297653266647,
+            "total_shares": 0.5078234288888854,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": 294.0297653266647,
+                    "price_per_share": 579.0,
+                    "shares_bought": 0.5078234288888854
+                }
+            ]
+        },
+        "ELE.MC": {
+            "total_invested": 314.33237517735455,
+            "total_shares": 8.52311187835382,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": 314.33237517735455,
+                    "price_per_share": 36.880001068115234,
+                    "shares_bought": 8.52311187835382
+                }
+            ]
+        },
+        "DIA.MC": {
+            "total_invested": 233.84500672437696,
+            "total_shares": 5.541350770063077,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": 233.84500672437696,
+                    "price_per_share": 42.20000076293945,
+                    "shares_bought": 5.541350770063077
+                }
+            ]
+        }
+    },
+    "current_prices_at_execution": {
+        "JNJ.DE": 198.83999633789062,
+        "SDR.L": 579.0,
+        "DIA.MC": 42.20000076293945,
+        "ELE.MC": 36.880001068115234,
+        "IDR.MC": 54.959999084472656,
+        "BTC-EUR": 63159.98828125,
+        "EGLN.L": 80.05999755859375
+    }
+}

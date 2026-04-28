@@ -1,0 +1,139 @@
+{
+    "timestamp": "2026-04-20 22:27:42",
+    "assets": [
+        "IDR.MC",
+        "EGLN.L",
+        "BTC-EUR",
+        "JNJ.DE",
+        "QLT.L",
+        "ELE.MC",
+        "SPG",
+        "DIA.MC",
+        "IBKR"
+    ],
+    "weights": [
+        0.1534788540245558,
+        0.14529331514324692,
+        0.27694406548430955,
+        0.1703681932271089,
+        5.71268212698748e-16,
+        0.09781947103479649,
+        0.08188656635659643,
+        0.07420953472938539,
+        0.0
+    ],
+    "detailed_investments": {
+        "IDR.MC": {
+            "total_invested": -2.3874235921539366e-12,
+            "total_shares": 8.18777306215662,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": -2.3874235921539366e-12,
+                    "price_per_share": 54.959999084472656,
+                    "shares_bought": -4.3439294612878435e-14
+                }
+            ]
+        },
+        "EGLN.L": {
+            "total_invested": -5.684341886080802e-14,
+            "total_shares": 5.321009405330321,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": -5.684341886080802e-14,
+                    "price_per_share": 80.05999755859375,
+                    "shares_bought": -7.1001024974058805e-16
+                }
+            ]
+        },
+        "BTC-EUR": {
+            "total_invested": -4.433786671143025e-12,
+            "total_shares": 0.01285624051075149,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": -4.433786671143025e-12,
+                    "price_per_share": 63159.98828125,
+                    "shares_bought": -7.019929534184638e-17
+                }
+            ]
+        },
+        "JNJ.DE": {
+            "total_invested": 255.51954254188325,
+            "total_shares": 2.5121683350518933,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": 255.51954254188325,
+                    "price_per_share": 198.83999633789062,
+                    "shares_bought": 1.285051032226316
+                }
+            ]
+        },
+        "QLT.L": {
+            "total_invested": 1.6749583996327292e-12,
+            "total_shares": 9.058726094769094e-15,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": 1.6749583996327292e-12,
+                    "price_per_share": 184.89999389648438,
+                    "shares_bought": 9.058726094769094e-15
+                }
+            ]
+        },
+        "ELE.MC": {
+            "total_invested": 286.8066890740233,
+            "total_shares": 7.776753816907649,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": 286.8066890740233,
+                    "price_per_share": 36.880001068115234,
+                    "shares_bought": 7.776753816907649
+                }
+            ]
+        },
+        "SPG": {
+            "total_invested": 240.09141255754074,
+            "total_shares": 1.1641924915458841,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": 240.09141255754074,
+                    "price_per_share": 206.22999572753906,
+                    "shares_bought": 1.1641924915458841
+                }
+            ]
+        },
+        "DIA.MC": {
+            "total_invested": 217.58235582655797,
+            "total_shares": 5.155979902674348,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": 217.58235582655797,
+                    "price_per_share": 42.20000076293945,
+                    "shares_bought": 5.155979902674348
+                }
+            ]
+        },
+        "IBKR": {
+            "total_invested": 0.0,
+            "total_shares": 0.0,
+            "transaction_history": []
+        }
+    },
+    "current_prices_at_execution": {
+        "IBKR": 81.70999908447266,
+        "JNJ.DE": 198.83999633789062,
+        "SPG": 206.22999572753906,
+        "QLT.L": 184.89999389648438,
+        "DIA.MC": 42.20000076293945,
+        "ELE.MC": 36.880001068115234,
+        "IDR.MC": 54.959999084472656,
+        "BTC-EUR": 63159.98828125,
+        "EGLN.L": 80.05999755859375
+    }
+}

@@ -1,0 +1,146 @@
+{
+    "timestamp": "2026-04-20 21:11:33",
+    "assets": [
+        "IDR.MC",
+        "EGLN.L",
+        "BTC-EUR",
+        "JNJ.DE",
+        "DIA.MC",
+        "FIX",
+        "VRT",
+        "RR.L",
+        "CBOE"
+    ],
+    "weights": [
+        0.15347885402455222,
+        0.14529331514324284,
+        0.2769440654843036,
+        0.11423437400627151,
+        0.062344092551805126,
+        0.09225537616637741,
+        0.05933660389048525,
+        2.4464324730577877e-16,
+        0.09611331873296175
+    ],
+    "detailed_investments": {
+        "IDR.MC": {
+            "total_invested": -1.290345608140342e-11,
+            "total_shares": 8.187773062156428,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": -1.290345608140342e-11,
+                    "price_per_share": 54.959999084472656,
+                    "shares_bought": -2.3477904469341437e-13
+                }
+            ]
+        },
+        "EGLN.L": {
+            "total_invested": -1.1993961379630491e-11,
+            "total_shares": 5.321009405330172,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": -1.1993961379630491e-11,
+                    "price_per_share": 80.05999755859375,
+                    "shares_bought": -1.4981216269526408e-13
+                }
+            ]
+        },
+        "BTC-EUR": {
+            "total_invested": -2.1827872842550278e-11,
+            "total_shares": 0.012856240510751214,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": -2.1827872842550278e-11,
+                    "price_per_share": 63159.98828125,
+                    "shares_bought": -3.4559653091370526e-16
+                }
+            ]
+        },
+        "JNJ.DE": {
+            "total_invested": 90.93518458638806,
+            "total_shares": 1.6844457390616205,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": 90.93518458638806,
+                    "price_per_share": 198.83999633789062,
+                    "shares_bought": 0.45732843623604313
+                }
+            ]
+        },
+        "DIA.MC": {
+            "total_invested": 182.79287936189263,
+            "total_shares": 4.331584740690894,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": 182.79287936189263,
+                    "price_per_share": 42.20000076293945,
+                    "shares_bought": 4.331584740690894
+                }
+            ]
+        },
+        "FIX": {
+            "total_invested": 270.4927629198186,
+            "total_shares": 0.1638883273983983,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": 270.4927629198186,
+                    "price_per_share": 1650.469970703125,
+                    "shares_bought": 0.1638883273983983
+                }
+            ]
+        },
+        "VRT": {
+            "total_invested": 173.97492260690277,
+            "total_shares": 0.5660666515256744,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": 173.97492260690277,
+                    "price_per_share": 307.3399963378906,
+                    "shares_bought": 0.5660666515256744
+                }
+            ]
+        },
+        "RR.L": {
+            "total_invested": 7.172940011005434e-13,
+            "total_shares": 5.473020101193414e-16,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": 7.172940011005434e-13,
+                    "price_per_share": 1310.5999755859375,
+                    "shares_bought": 5.473020101193414e-16
+                }
+            ]
+        },
+        "CBOE": {
+            "total_invested": 281.80425052504387,
+            "total_shares": 0.9395354011844245,
+            "transaction_history": [
+                {
+                    "date": "2026-04-20",
+                    "amount": 281.80425052504387,
+                    "price_per_share": 299.94000244140625,
+                    "shares_bought": 0.9395354011844245
+                }
+            ]
+        }
+    },
+    "current_prices_at_execution": {
+        "CBOE": 299.94000244140625,
+        "FIX": 1650.469970703125,
+        "JNJ.DE": 198.83999633789062,
+        "VRT": 307.3399963378906,
+        "RR.L": 1310.5999755859375,
+        "DIA.MC": 42.20000076293945,
+        "IDR.MC": 54.959999084472656,
+        "BTC-EUR": 63159.98828125,
+        "EGLN.L": 80.05999755859375
+    }
+}

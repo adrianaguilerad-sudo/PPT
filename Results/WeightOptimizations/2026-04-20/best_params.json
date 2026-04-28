@@ -1,0 +1,14 @@
+{
+    "top_candidates": 3,
+    "holding_zone": 77,
+    "w_EV_UFCF": 0.25,
+    "w_EV_EBITDA_CAPEX": 0.2,
+    "w_ROA": 0.1667,
+    "w_Alpha_6F": 0.1667,
+    "w_Momentum_12M_1M": 0.2833,
+    "h_roa_min": 0.0,
+    "h_ebit_min": 0.0,
+    "h_int_cov_min": 1.5,
+    "h_pass_fin": 4,
+    "h_pass_std": 5
+}

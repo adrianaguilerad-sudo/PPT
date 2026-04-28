@@ -1,0 +1,9 @@
+{
+    "top_candidates": 6,
+    "holding_zone": 60,
+    "w_EV_UFCF": 0.1,
+    "w_EV_EBITDA_CAPEX": 0.0,
+    "w_ROA": 0.15000000000000002,
+    "w_Alpha_6F": 0.4,
+    "w_Momentum_12M_1M": 0.25
+}

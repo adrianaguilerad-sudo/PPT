@@ -1,0 +1,194 @@
+{
+    "timestamp": "2026-04-28 17:05:38",
+    "assets": [
+        "IDR.MC",
+        "EGLN.L",
+        "BTC-EUR",
+        "JNJ.DE",
+        "ICGA.DE",
+        "VVSM.DE",
+        "XAIX.DE",
+        "URNU.L",
+        "HTMW.DE",
+        "ICLN",
+        "VVMX.DE",
+        "SXR8.DE",
+        "ELE.MC",
+        "SDR.L",
+        "TJX.DE"
+    ],
+    "weights": [
+        0.15347885402455527,
+        0.14529331514324598,
+        0.27694406548430833,
+        0.08321964529331558,
+        0.0,
+        0.1961450321066667,
+        0.0,
+        0.0,
+        1.773699324028169e-16,
+        0.0,
+        0.060281950797991445,
+        0.0,
+        5.419651834869884e-16,
+        0.08463713714991605,
+        0.0
+    ],
+    "detailed_investments": {
+        "IDR.MC": {
+            "total_invested": -4.035882739117369e-12,
+            "total_shares": 8.985622674657138,
+            "transaction_history": [
+                {
+                    "date": "2026-04-28",
+                    "amount": -4.035882739117369e-12,
+                    "price_per_share": 50.08000183105469,
+                    "shares_bought": -8.058870989526826e-14
+                }
+            ]
+        },
+        "EGLN.L": {
+            "total_invested": -2.8990143619012088e-12,
+            "total_shares": 5.507433851372647,
+            "transaction_history": [
+                {
+                    "date": "2026-04-28",
+                    "amount": -2.8990143619012088e-12,
+                    "price_per_share": 77.3499984741211,
+                    "shares_bought": -3.747917801021197e-14
+                }
+            ]
+        },
+        "BTC-EUR": {
+            "total_invested": -8.185452315956354e-12,
+            "total_shares": 0.012304026509722019,
+            "transaction_history": [
+                {
+                    "date": "2026-04-28",
+                    "amount": -8.185452315956354e-12,
+                    "price_per_share": 65994.65625,
+                    "shares_bought": -1.2403204715467177e-16
+                }
+            ]
+        },
+        "JNJ.DE": {
+            "total_invested": 1.2221335055073723e-12,
+            "total_shares": 1.2691147767162017,
+            "transaction_history": [
+                {
+                    "date": "2026-04-28",
+                    "amount": 1.2221335055073723e-12,
+                    "price_per_share": 192.25999450683594,
+                    "shares_bought": 6.356670864587581e-15
+                }
+            ]
+        },
+        "ICGA.DE": {
+            "total_invested": 0.0,
+            "total_shares": 0.0,
+            "transaction_history": []
+        },
+        "VVSM.DE": {
+            "total_invested": 575.0972341367466,
+            "total_shares": 7.6050940657065835,
+            "transaction_history": [
+                {
+                    "date": "2026-04-28",
+                    "amount": 575.0972341367466,
+                    "price_per_share": 75.62000274658203,
+                    "shares_bought": 7.6050940657065835
+                }
+            ]
+        },
+        "XAIX.DE": {
+            "total_invested": 0.0,
+            "total_shares": 0.0,
+            "transaction_history": []
+        },
+        "URNU.L": {
+            "total_invested": 0.0,
+            "total_shares": 0.0,
+            "transaction_history": []
+        },
+        "HTMW.DE": {
+            "total_invested": 5.20048641805059e-13,
+            "total_shares": 7.191932590872153e-14,
+            "transaction_history": [
+                {
+                    "date": "2026-04-28",
+                    "amount": 5.20048641805059e-13,
+                    "price_per_share": 7.230999946594238,
+                    "shares_bought": 7.191932590872153e-14
+                }
+            ]
+        },
+        "ICLN": {
+            "total_invested": 0.0,
+            "total_shares": 0.0,
+            "transaction_history": []
+        },
+        "VVMX.DE": {
+            "total_invested": 176.74667973971088,
+            "total_shares": 10.769356121961708,
+            "transaction_history": [
+                {
+                    "date": "2026-04-28",
+                    "amount": 176.74667973971088,
+                    "price_per_share": 16.41200065612793,
+                    "shares_bought": 10.769356121961708
+                }
+            ]
+        },
+        "SXR8.DE": {
+            "total_invested": 0.0,
+            "total_shares": 0.0,
+            "transaction_history": []
+        },
+        "ELE.MC": {
+            "total_invested": 1.5890419179838498e-12,
+            "total_shares": 4.171808641685941e-14,
+            "transaction_history": [
+                {
+                    "date": "2026-04-28",
+                    "amount": 1.5890419179838498e-12,
+                    "price_per_share": 38.09000015258789,
+                    "shares_bought": 4.171808641685941e-14
+                }
+            ]
+        },
+        "SDR.L": {
+            "total_invested": 248.15608612355382,
+            "total_shares": 0.42822447993710755,
+            "transaction_history": [
+                {
+                    "date": "2026-04-28",
+                    "amount": 248.15608612355382,
+                    "price_per_share": 579.5,
+                    "shares_bought": 0.42822447993710755
+                }
+            ]
+        },
+        "TJX.DE": {
+            "total_invested": 0.0,
+            "total_shares": 0.0,
+            "transaction_history": []
+        }
+    },
+    "current_prices_at_execution": {
+        "JNJ.DE": 192.25999450683594,
+        "TJX.DE": 134.5,
+        "SDR.L": 579.5,
+        "IDR.MC": 50.08000183105469,
+        "ELE.MC": 38.09000015258789,
+        "ICGA.DE": 4.987500190734863,
+        "VVSM.DE": 75.62000274658203,
+        "XAIX.DE": 169.77999877929688,
+        "URNU.L": 34.349998474121094,
+        "VVMX.DE": 16.41200065612793,
+        "HTMW.DE": 7.230999946594238,
+        "ICLN": 20.18000030517578,
+        "BTC-EUR": 65994.65625,
+        "SXR8.DE": 655.1400146484375,
+        "EGLN.L": 77.3499984741211
+    }
+}

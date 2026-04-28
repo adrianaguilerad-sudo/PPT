@@ -1,0 +1,122 @@
+{
+    "timestamp": "2026-04-15 19:48:22",
+    "assets": [
+        "IDR.MC",
+        "EGLN.L",
+        "BTC-EUR",
+        "ICY.F",
+        "MP2.F",
+        "BYG.L",
+        "HPE.F",
+        "DO2.F"
+    ],
+    "weights": [
+        0.1673515128875597,
+        0.16062756817332738,
+        0.29846843481509167,
+        0.012074604437628445,
+        0.36147787968638845,
+        0.0,
+        4.4266192622533254e-15,
+        0.0
+    ],
+    "detailed_investments": {
+        "IDR.MC": {
+            "total_invested": -2.6716406864579767e-12,
+            "total_shares": 8.602150235195657,
+            "transaction_history": [
+                {
+                    "date": "2026-04-15",
+                    "amount": -2.6716406864579767e-12,
+                    "price_per_share": 52.08000183105469,
+                    "shares_bought": -5.129878249860024e-14
+                }
+            ]
+        },
+        "EGLN.L": {
+            "total_invested": -2.6147972675971687e-12,
+            "total_shares": 5.4361568684565675,
+            "transaction_history": [
+                {
+                    "date": "2026-04-15",
+                    "amount": -2.6147972675971687e-12,
+                    "price_per_share": 79.0999984741211,
+                    "shares_bought": -3.305685610667419e-14
+                }
+            ]
+        },
+        "BTC-EUR": {
+            "total_invested": 3.410605131648481e-13,
+            "total_shares": 0.012707618476468726,
+            "transaction_history": [
+                {
+                    "date": "2026-04-15",
+                    "amount": 3.410605131648481e-13,
+                    "price_per_share": 62875.66796875,
+                    "shares_bought": 5.424364053426191e-18
+                }
+            ]
+        },
+        "JNJ.F": {
+            "total_invested": 0.0,
+            "total_shares": 0.0,
+            "transaction_history": []
+        },
+        "ICY.F": {
+            "total_invested": 32.323716079531344,
+            "total_shares": 0.3994527534719622,
+            "transaction_history": [
+                {
+                    "date": "2026-04-15",
+                    "amount": 32.323716079531344,
+                    "price_per_share": 80.91999816894531,
+                    "shares_bought": 0.3994527534719622
+                }
+            ]
+        },
+        "MP2.F": {
+            "total_invested": 967.6762839204619,
+            "total_shares": 479.99814898638743,
+            "transaction_history": [
+                {
+                    "date": "2026-04-15",
+                    "amount": 967.6762839204619,
+                    "price_per_share": 2.0160000324249268,
+                    "shares_bought": 479.99814898638743
+                }
+            ]
+        },
+        "BYG.L": {
+            "total_invested": 0.0,
+            "total_shares": 0.0,
+            "transaction_history": []
+        },
+        "HPE.F": {
+            "total_invested": 1.1850059765052153e-11,
+            "total_shares": 2.500012729379674e-12,
+            "transaction_history": [
+                {
+                    "date": "2026-04-15",
+                    "amount": 1.1850059765052153e-11,
+                    "price_per_share": 4.739999771118164,
+                    "shares_bought": 2.500012729379674e-12
+                }
+            ]
+        },
+        "DO2.F": {
+            "total_invested": 0.0,
+            "total_shares": 0.0,
+            "transaction_history": []
+        }
+    },
+    "current_prices_at_execution": {
+        "BTC-EUR": 62875.66796875,
+        "BYG.L": 885.5,
+        "DO2.F": 91.26000213623047,
+        "EGLN.L": 79.0999984741211,
+        "HPE.F": 4.739999771118164,
+        "ICY.F": 80.91999816894531,
+        "IDR.MC": 52.08000183105469,
+        "MP2.F": 2.0160000324249268
+    }
+}

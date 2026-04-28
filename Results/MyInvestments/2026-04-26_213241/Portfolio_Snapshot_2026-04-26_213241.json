@@ -1,0 +1,223 @@
+{
+    "timestamp": "2026-04-26 21:32:42",
+    "assets": [
+        "IDR.MC",
+        "EGLN.L",
+        "BTC-EUR",
+        "JNJ.DE",
+        "ICGA.DE",
+        "VVSM.DE",
+        "XAIX.DE",
+        "URNU.L",
+        "HTMW.DE",
+        "ICLN",
+        "VVMX.DE",
+        "SXR8.DE",
+        "DIA.MC",
+        "HPE.F",
+        "ELE.MC",
+        "SPG"
+    ],
+    "weights": [
+        0.1534788540245562,
+        0.14529331514324653,
+        0.27694406548431033,
+        0.09044345217219392,
+        0.0,
+        0.0,
+        1.9186663348140695e-16,
+        0.0,
+        0.0,
+        4.863183038369861e-16,
+        9.194702959412528e-17,
+        0.04429750321917683,
+        0.12501299629179932,
+        5.8649289722650295e-18,
+        0.10001816828025135,
+        0.06451164538446477
+    ],
+    "detailed_investments": {
+        "IDR.MC": {
+            "total_invested": -1.1937117960769683e-12,
+            "total_shares": 9.437919402679832,
+            "transaction_history": [
+                {
+                    "date": "2026-04-26",
+                    "amount": -1.1937117960769683e-12,
+                    "price_per_share": 47.68000030517578,
+                    "shares_bought": -2.5035901603116978e-14
+                }
+            ]
+        },
+        "EGLN.L": {
+            "total_invested": -1.0800249583553523e-12,
+            "total_shares": 5.445481039497388,
+            "transaction_history": [
+                {
+                    "date": "2026-04-26",
+                    "amount": -1.0800249583553523e-12,
+                    "price_per_share": 78.2300033569336,
+                    "shares_bought": -1.3805763927014184e-14
+                }
+            ]
+        },
+        "BTC-EUR": {
+            "total_invested": -1.9326762412674725e-12,
+            "total_shares": 0.012264950593145377,
+            "transaction_history": [
+                {
+                    "date": "2026-04-26",
+                    "amount": -1.9326762412674725e-12,
+                    "price_per_share": 66204.9140625,
+                    "shares_bought": -2.9192338191738327e-17
+                }
+            ]
+        },
+        "JNJ.DE": {
+            "total_invested": 21.180201768872593,
+            "total_shares": 1.3628337921340807,
+            "transaction_history": [
+                {
+                    "date": "2026-04-26",
+                    "amount": 21.180201768872593,
+                    "price_per_share": 194.5800018310547,
+                    "shares_bought": 0.1088508663252169
+                }
+            ]
+        },
+        "ICGA.DE": {
+            "total_invested": 0.0,
+            "total_shares": 0.0,
+            "transaction_history": []
+        },
+        "VVSM.DE": {
+            "total_invested": 0.0,
+            "total_shares": 0.0,
+            "transaction_history": []
+        },
+        "XAIX.DE": {
+            "total_invested": 5.625529693674853e-13,
+            "total_shares": 3.3393858895125963e-15,
+            "transaction_history": [
+                {
+                    "date": "2026-04-26",
+                    "amount": 5.625529693674853e-13,
+                    "price_per_share": 168.4600067138672,
+                    "shares_bought": 3.3393858895125963e-15
+                }
+            ]
+        },
+        "URNU.L": {
+            "total_invested": 0.0,
+            "total_shares": 0.0,
+            "transaction_history": []
+        },
+        "HTMW.DE": {
+            "total_invested": 0.0,
+            "total_shares": 0.0,
+            "transaction_history": []
+        },
+        "ICLN": {
+            "total_invested": 1.4258852668500435e-12,
+            "total_shares": 7.132992912337011e-14,
+            "transaction_history": [
+                {
+                    "date": "2026-04-26",
+                    "amount": 1.4258852668500435e-12,
+                    "price_per_share": 19.989999771118164,
+                    "shares_bought": 7.132992912337011e-14
+                }
+            ]
+        },
+        "VVMX.DE": {
+            "total_invested": 2.695886907699754e-13,
+            "total_shares": 1.6352583390264036e-14,
+            "transaction_history": [
+                {
+                    "date": "2026-04-26",
+                    "amount": 2.695886907699754e-13,
+                    "price_per_share": 16.486000061035156,
+                    "shares_bought": 1.6352583390264036e-14
+                }
+            ]
+        },
+        "SXR8.DE": {
+            "total_invested": 129.8802794386265,
+            "total_shares": 0.19807278295848849,
+            "transaction_history": [
+                {
+                    "date": "2026-04-26",
+                    "amount": 129.8802794386265,
+                    "price_per_share": 655.719970703125,
+                    "shares_bought": 0.19807278295848849
+                }
+            ]
+        },
+        "DIA.MC": {
+            "total_invested": 366.5381051275557,
+            "total_shares": 8.97278136643656,
+            "transaction_history": [
+                {
+                    "date": "2026-04-26",
+                    "amount": 366.5381051275557,
+                    "price_per_share": 40.849998474121094,
+                    "shares_bought": 8.97278136643656
+                }
+            ]
+        },
+        "HPE.F": {
+            "total_invested": 1.7195971746681073e-14,
+            "total_shares": 3.658717541388524e-15,
+            "transaction_history": [
+                {
+                    "date": "2026-04-26",
+                    "amount": 1.7195971746681073e-14,
+                    "price_per_share": 4.699999809265137,
+                    "shares_bought": 3.658717541388524e-15
+                }
+            ]
+        },
+        "ELE.MC": {
+            "total_invested": 293.25326939769707,
+            "total_shares": 7.626872914924703,
+            "transaction_history": [
+                {
+                    "date": "2026-04-26",
+                    "amount": 293.25326939769707,
+                    "price_per_share": 38.45000076293945,
+                    "shares_bought": 7.626872914924703
+                }
+            ]
+        },
+        "SPG": {
+            "total_invested": 189.14814426725076,
+            "total_shares": 0.940287039291195,
+            "transaction_history": [
+                {
+                    "date": "2026-04-26",
+                    "amount": 189.14814426725076,
+                    "price_per_share": 201.16000366210938,
+                    "shares_bought": 0.940287039291195
+                }
+            ]
+        }
+    },
+    "current_prices_at_execution": {
+        "HPE.F": 4.699999809265137,
+        "JNJ.DE": 194.5800018310547,
+        "SPG": 201.16000366210938,
+        "DIA.MC": 40.849998474121094,
+        "ELE.MC": 38.45000076293945,
+        "IDR.MC": 47.68000030517578,
+        "BTC-EUR": 66204.9140625,
+        "EGLN.L": 78.2300033569336,
+        "SXR8.DE": 655.719970703125,
+        "ICGA.DE": 5.0320000648498535,
+        "VVSM.DE": 76.5,
+        "XAIX.DE": 168.4600067138672,
+        "URNU.L": 34.6349983215332,
+        "HTMW.DE": 7.257999897003174,
+        "ICLN": 19.989999771118164,
+        "VVMX.DE": 16.486000061035156
+    }
+}

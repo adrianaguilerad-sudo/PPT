@@ -1,0 +1,49 @@
+{
+    "top_candidates": 4,
+    "holding_zone": 70,
+    "w_EV_UFCF": 0.2833,
+    "w_EV_EBITDA_CAPEX": 0.25,
+    "w_ROA": 0.05,
+    "w_Alpha_6F": 0.0833,
+    "w_Momentum_12M_1M": 0.2667,
+    "top_candidates_distribution": [
+        5,
+        3,
+        4
+    ],
+    "holding_zone_distribution": [
+        65,
+        60,
+        85
+    ],
+    "w_EV_UFCF_distribution": [
+        0.35000000000000003,
+        0.35000000000000003,
+        0.15000000000000002
+    ],
+    "w_EV_EBITDA_CAPEX_distribution": [
+        0.15000000000000002,
+        0.25,
+        0.35000000000000003
+    ],
+    "w_ROA_distribution": [
+        0.05,
+        0.05,
+        0.05
+    ],
+    "w_Alpha_6F_distribution": [
+        0.2,
+        0.0,
+        0.05
+    ],
+    "w_Momentum_12M_1M_distribution": [
+        0.25,
+        0.25,
+        0.30000000000000004
+    ],
+    "h_roa_min": 0.0,
+    "h_ebit_min": 0.0,
+    "h_int_cov_min": 1.5,
+    "h_pass_fin": 4,
+    "h_pass_std": 5
+}
