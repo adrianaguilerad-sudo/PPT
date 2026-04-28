@@ -726,7 +726,13 @@ class Portfolio:
         )
 
         if result.success:
-            self.weights = result.x
+            w = result.x
+            # Zero out sub-threshold weights to prevent ghost positions from floating-point noise.
+            # SLSQP can return values like 1e-15 for assets with zero current value and zero
+            # target weight; these propagate into shares via calculate_rebalance_contribution.
+            w[w < 1e-6] = 0.0
+            w /= w.sum()
+            self.weights = w
         else:
             raise ValueError(f"[WARNING] Optimization did not converge: {result.message}. Retaining previous weights.")
 

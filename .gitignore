@@ -1,0 +1,8 @@
+﻿# Ignorar la carpeta Results y todo su contenido
+Results/
+
+# Ignorar la carpeta CacheData y todo su contenido
+CacheData/
+
+# Ignorar todos los archivos de texto
+*.txt

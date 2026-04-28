@@ -235,11 +235,11 @@ class MarketAnalyzer:
             model = sm.OLS(y[valid_idx], X_mat.loc[valid_idx])
             res   = model.fit()
 
-            # Annualise the daily intercept (alpha)
-            # Correct annualisation for log-returns: alpha_annual = alpha_daily * 252
-            # This is standard in the FF literature (they report annual alphas).
+            # Annualise the daily intercept (alpha).
+            # Regression uses arithmetic returns (pct_change), so compound annualisation
+            # is (1 + alpha_daily)^252 - 1, not the log-return approximation alpha*252.
             daily_alpha      = res.params["const"]
-            annualized_alpha = daily_alpha * 252
+            annualized_alpha = (1 + daily_alpha) ** 252 - 1
 
             results_list.append({
                 "Ticker":    ticker,
@@ -414,21 +414,26 @@ class MarketAnalyzer:
             """Internal helper to fetch cached historical cross-currency rates directly from RAM."""
             if from_curr == 'GBp' and to_curr == 'GBP': return 0.01
             if from_curr == 'GBP' and to_curr == 'GBp': return 100.0
-            
-            if from_curr == 'GBp': from_curr = 'GBP'
+
+            # GBp to any non-GBP currency: convert pence to pounds (÷100) then apply FX rate.
+            # Without this scale, aligned_price would be 100x too large (pence treated as pounds).
+            pence_scale = 1.0
+            if from_curr == 'GBp':
+                pence_scale = 0.01
+                from_curr = 'GBP'
             if to_curr == 'GBp': to_curr = 'GBP'
-            if from_curr == to_curr: return 1.0
-                
+            if from_curr == to_curr: return 1.0 * pence_scale
+
             pair = f"{from_curr}{to_curr}=X"
             series = self.fx_rates_db.get(pair)
-            
+
             if series is not None and not series.empty:
                 # Ensure index is timezone-naive for safe slicing
                 if series.index.tz is not None:
                     series.index = series.index.tz_localize(None)
                 sliced = series.loc[:date_target]
                 if not sliced.empty:
-                    return sliced.iloc[-1]
+                    return sliced.iloc[-1] * pence_scale
             return None
 
         results = []
