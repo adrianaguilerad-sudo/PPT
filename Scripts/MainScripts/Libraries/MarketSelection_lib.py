@@ -1099,6 +1099,11 @@ def load_or_update_market_cache(tickers, start_date, end_date, cache_file=os.pat
                 if pair not in cache_data['fx_rates']:
                     required_fx_pairs.add(pair)
 
+    # Always ensure base EUR conversion pairs are cached (portfolio is EUR-denominated)
+    for _pair in ('EURUSD=X', 'GBPEUR=X'):
+        if _pair not in cache_data['fx_rates']:
+            required_fx_pairs.add(_pair)
+
     if required_fx_pairs:
         print(f"[INFO] New currency mismatches detected. Downloading {len(required_fx_pairs)} FX pairs for cache...")
         # Extend the start date slightly to ensure we have data covering weekends/holidays around the start

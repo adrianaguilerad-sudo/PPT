@@ -405,7 +405,44 @@ def save_execution_outputs(my_portfolio, global_ranked_df, current_prices, adjus
     print(f"[INFO] Portfolio snapshot saved to {snapshot_path}")
     return folder_path
 
-def get_monthly_recommendations(indices_dict,current_holdings, monthly_contribution=1000.0, 
+def _convert_prices_to_eur(prices, fundamentals_db, fx_rates_db, target_date):
+    """
+    Converts a dict of native-currency prices to EUR using cached FX rates.
+    Required because prices_db stores assets in their native currency (USD, GBP, etc.)
+    but all portfolio accounting must be done in EUR.
+    """
+    def _get_rate(pair):
+        series = fx_rates_db.get(pair)
+        if series is None or series.empty:
+            return None
+        idx = series.index.tz_localize(None) if series.index.tz is not None else series.index
+        sliced = pd.Series(series.values, index=idx).loc[:target_date]
+        return float(sliced.iloc[-1]) if not sliced.empty else None
+
+    eurusd = _get_rate('EURUSD=X')
+    gbpeur = _get_rate('GBPEUR=X')
+
+    converted = []
+    for ticker, price in list(prices.items()):
+        fund = fundamentals_db.get(ticker)
+        if not fund or not isinstance(fund, dict):
+            continue
+        currency = fund.get('info', {}).get('currency', 'EUR')
+        if currency == 'USD' and eurusd:
+            prices[ticker] = price / eurusd
+            converted.append(ticker)
+        elif currency in ('GBP', 'GBp') and gbpeur:
+            prices[ticker] = price * gbpeur
+            converted.append(ticker)
+
+    if converted:
+        eurusd_str = f"{eurusd:.4f}" if eurusd else "N/A"
+        gbpeur_str = f"{gbpeur:.4f}" if gbpeur else "N/A"
+      #  print(f"[INFO] Prices converted to EUR (EURUSD={eurusd_str}, GBPEUR={gbpeur_str}) for: {converted}")
+    return prices
+
+
+def get_monthly_recommendations(indices_dict,current_holdings, monthly_contribution=1000.0,
                                 top_candidates=5, holding_zone=80, 
                                 custom_weights=None, health_params=None,
                                 not_available_tickers=None):
@@ -461,28 +498,32 @@ def get_monthly_recommendations(indices_dict,current_holdings, monthly_contribut
     lookback_prices_date = today - relativedelta(years=FUNDAMENTAL_WINDOW_YEARS)
     
     sim_prices_df = analyzer.prices_db.loc[lookback_prices_date:today]
-    current_prices = get_prices_at_date(sim_prices_df, today)
-    
+    current_prices_native = get_prices_at_date(sim_prices_df, today)
+    # Convert to EUR for all portfolio accounting; keep native copy for get_multipliers
+    current_prices = _convert_prices_to_eur(
+        current_prices_native.copy(), analyzer.fundamentals_db, analyzer.fx_rates_db, today
+    )
+
     print("\n>>> Phase 2: Loading Current Holdings and converting to shares...")
     for ticker, eur_value in current_holdings.items():
         my_portfolio.add_financial_asset(ticker, 0.0) # Init tracking
-        
+
         # Retrieve the price for conversion
         price = current_prices.get(ticker, 0.0)
-        
+
         if price > 0:
             # Convert EUR value to total shares
             calculated_shares = eur_value / price
             my_portfolio.investments[ticker]['total_shares'] = calculated_shares
-            print(f"[INFO] Loaded {ticker}: ${eur_value:.2f} | Price: ${price:.2f} | Shares: {calculated_shares:.6f}")
+            print(f"[INFO] Loaded {ticker}: €{eur_value:.2f} | Price: €{price:.2f} | Shares: {calculated_shares:.6f}")
         else:
             print(f"[WARNING] Skipping {ticker}: Current price not found in database.")
 
     raw_market = analyzer.get_market_performance_coefficients(lookback_prices_date, today)
 
     multipliers_df = analyzer.get_multipliers(
-        target_date=today, 
-        current_prices=current_prices, 
+        target_date=today,
+        current_prices=current_prices_native,  # native currencies for internal market-cap alignment
         lookback_years=FUNDAMENTAL_WINDOW_YEARS,
         health_params=health_params
     )
@@ -503,11 +544,15 @@ def get_monthly_recommendations(indices_dict,current_holdings, monthly_contribut
     approved_equities = top_candidates_df['Ticker'].tolist()
     final_universe_check = list(dict.fromkeys(my_portfolio.tags + approved_equities +PROTECTED_TICKERS))
     
-    current_prices = ensure_all_prices_available(
+    current_prices_native = ensure_all_prices_available(
         final_universe_check=final_universe_check,
-        current_prices=current_prices,
+        current_prices=current_prices_native,
         transaction_date=today,
         transaction_date_str=today.strftime('%Y-%m-%d')
+    )
+    # Re-apply EUR conversion to pick up any newly fetched tickers
+    current_prices = _convert_prices_to_eur(
+        current_prices_native.copy(), analyzer.fundamentals_db, analyzer.fx_rates_db, today
     )
 
     # 5. Optimization & Rotation Strategy
@@ -735,6 +780,10 @@ def run_historical_backtest(indices_dict, months_to_simulate=12, monthly_contrib
             current_prices=current_prices,
             transaction_date=sim_date,
             transaction_date_str=sim_date_str
+        )
+        # Convert to EUR for all portfolio accounting (prices_db stores native currencies)
+        current_prices = _convert_prices_to_eur(
+            current_prices, analyzer.fundamentals_db, analyzer.fx_rates_db, sim_date
         )
 
         print(">>> Phase 2: Evaluating Portfolio ROI...")

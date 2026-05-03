@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E '\\\\.\\(py|ts|tsx|js|jsx\\)$|src|app')",
+      "Bash(del *)",
+      "PowerShell(Remove-Item *)",
+      "Bash(python Scripts/MainScripts/BackTestPortfolio.py)"
+    ]
+  }
+}
