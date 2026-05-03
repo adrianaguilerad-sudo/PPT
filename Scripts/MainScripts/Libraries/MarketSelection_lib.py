@@ -992,9 +992,11 @@ def _fetch_single_fundamental(ticker):
         print(f"[ERROR] Failed fetching data for {ticker}: {e}")
         return ticker, None
 
+CACHE_VERSION = "v2_gbp_pence_fix"
+
 def load_or_update_market_cache(tickers, start_date, end_date, cache_file=os.path.join("CacheData", "Local_Market_Cache.pkl"), ff_universe="developed"):
     """
-    Centralized cache manager for market prices, fundamentals, Fama-French factors, 
+    Centralized cache manager for market prices, fundamentals, Fama-French factors,
     and required FX exchange rates. Persists data to disk to minimize network calls.
     """
     import os
@@ -1010,11 +1012,12 @@ def load_or_update_market_cache(tickers, start_date, end_date, cache_file=os.pat
         'fundamentals': {},
         'attempted_tickers': [],
         'ff_factors': pd.DataFrame(),
-        'fx_rates': {}  # Storage for FX pairs
+        'fx_rates': {},
+        'cache_version': None
     }
-    
+
     end_str = end_date.strftime('%Y-%m-%d') if hasattr(end_date, 'strftime') else end_date
-    cache_modified = False 
+    cache_modified = False
 
     # Load existing cache from disk if available
     if os.path.exists(cache_file):
@@ -1025,6 +1028,13 @@ def load_or_update_market_cache(tickers, start_date, end_date, cache_file=os.pat
                 print("[INFO] Successfully loaded local market cache.")
         except Exception as e:
             print(f"[WARNING] Could not load cache file: {e}. Building new cache.")
+
+    # Version check: if cache was built before the GBp fix, force a price refresh
+    if cache_data.get('cache_version') != CACHE_VERSION:
+        print(f"[INFO] Cache version mismatch (found '{cache_data.get('cache_version')}', expected '{CACHE_VERSION}'). Forcing price refresh to apply GBX->GBP correction...")
+        cache_data['last_date'] = None
+        cache_data['cache_version'] = CACHE_VERSION
+        cache_modified = True
 
     # --- 1. Update Prices ---
     if cache_data['last_date'] != end_str:

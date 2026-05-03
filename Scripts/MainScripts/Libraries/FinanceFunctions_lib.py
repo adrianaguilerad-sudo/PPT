@@ -45,33 +45,41 @@ def download_historical_prices_batch(tickers, start_date, end_date):
         try:
             # yf.Ticker creates an isolated object, fixing the shared-state race condition
             tkr = yf.Ticker(ticker)
-            
+
             # auto_adjust=False ensures we get raw 'Adj Close' correctly mapped
             df = tkr.history(start=start_str, end=end_str, auto_adjust=False)
-            
+
             if df.empty:
                 return ticker, None
-            
+
             # Safely extract Adjusted Close or Close
             if 'Adj Close' in df.columns:
                 price_series = df['Adj Close']
             else:
                 price_series = df['Close']
-                    
+
             if isinstance(price_series, pd.DataFrame):
                 price_series = price_series.iloc[:, 0]
-                
+
+            # LSE stocks quoted in GBX (pence) must be divided by 100 to get GBP.
+            # yfinance reports currency='GBp' for these (lowercase p = pence).
+            try:
+                if tkr.fast_info.currency == 'GBp':
+                    price_series = price_series / 100
+            except Exception:
+                pass
+
             # Legacy cleaning logic to guarantee exact mathematical match
             price_series.index = pd.to_datetime(price_series.index).tz_localize(None).normalize()
             price_series = price_series[~price_series.index.duplicated(keep='first')]
-            
+
             return ticker, price_series
         except Exception as e:
             print(f"[ERROR] Download failed for {ticker}: {e}")
             return ticker, None
 
     # Max workers set to 10 is the sweet spot to avoid Yahoo Finance 429 rate limit
-    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
         futures = {executor.submit(fetch_single_ticker, t): t for t in ticker_list}
         
         for future in concurrent.futures.as_completed(futures):

@@ -16,8 +16,11 @@ ETFS = [
     'HTMW.DE',  # Theme: Green Hydrogen (L&G Hydrogen Economy UCITS ETF Acc)
     'ICLN',  # Theme: Green Energy (iShares Global Clean Energy UCITS ETF Acc)
     'VVMX.DE',   # Theme: Rare Earths (VanEck Rare Earth and Strategic Metals UCITS ETF Acc)
-    'SXR8.DE'    # Theme:  SP500
+    'SXR8.DE',    # Theme:  SP500
+    'WQTM.DE'
 ]
+
+#WQTM.DE Theme: Quantum Computing
 
 VALUE_REFUGES=['BTC-EUR', 'EGLN.L']
 

@@ -8,10 +8,13 @@ from InvestingStrategy_lib import get_monthly_recommendations
 
 # Current portfolio quantities (This is the only thing that changes month to month)
 CURRENT_HOLDINGS = {
-    'IDR.MC': 423,
-    'EGLN.L': 420,
-    'BTC-EUR': 831,
-    'JNJ.DE': 236
+    'IDR.MC': 418,
+    'EGLN.L': 410,
+    'BTC-EUR': 833.5,
+    'JNJ.DE': 236.7,
+    'VVSM.DE': 660,
+    'VVMX.DE': 304,
+    'URNU.L': 29
 }
 
 if __name__ == "__main__":
