@@ -8,7 +8,8 @@
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\adria\\\\OneDrive\\\\Documentos\\\\Portfolio\" -Recurse -Force)",
       "Bash(Select-Object -Property FullName, PSIsContainer)",
       "Bash(Sort-Object FullName)",
-      "Bash(git rm *)"
+      "Bash(git rm *)",
+      "Bash(git add *)"
     ]
   }
 }

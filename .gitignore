@@ -14,5 +14,6 @@ __pycache__/
 *.doc
 *.docx
 
-# Ignore PDF files
+# Ignore PDF files (except the architecture document)
 *.pdf
+!Investment_Strategy_Tool_Architecture_and_Technical_Document.pdf
