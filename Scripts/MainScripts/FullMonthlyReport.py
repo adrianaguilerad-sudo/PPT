@@ -14,7 +14,7 @@ CURRENT_HOLDINGS = {
     'JNJ.DE': 236.7,
     'VVSM.DE': 660,
     'VVMX.DE': 304,
-    'URNU.L': 29
+    'URNU.DE': 29
 }
 
 if __name__ == "__main__":

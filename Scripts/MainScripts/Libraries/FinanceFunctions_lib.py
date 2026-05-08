@@ -100,35 +100,45 @@ def download_historical_prices_batch(tickers, start_date, end_date):
 def get_current_prices(tickers):
     """
     Fetches the latest closing prices for the given tickers.
-    Uses a 5-day lookback and forward-fill to safely handle weekends and holidays 
+    Uses a 5-day lookback and forward-fill to safely handle weekends and holidays
     where crypto trades (24/7) but traditional markets do not.
+    Applies GBX->GBP conversion for LSE assets quoted in pence (currency='GBp').
     """
-    
-    # Download a 5-day window to guarantee we catch the last active trading day
-    data = yf.download(tickers, period="5d", progress=False)
-    
-    # Safely extract the closing prices
-    if isinstance(data.columns, pd.MultiIndex):
-        level_zero = data.columns.get_level_values(0)
-        if 'Adj Close' in level_zero:
-            price_data = data['Adj Close']
-        else:
-            price_data = data['Close']
-    else:
-        if 'Adj Close' in data.columns:
-            price_data = data['Adj Close']
-        else:
-            price_data = data['Close']
-            
-    # Force Series to DataFrame to handle single-ticker queries uniformly
-    if isinstance(price_data, pd.Series):
-        price_data = price_data.to_frame()
-        
-    # Forward-fill (ffill) carries the last valid Friday price into Saturday/Sunday.
-    # Then we safely take the very last row (.iloc[-1]).
-    latest_prices = price_data.ffill().iloc[-1]
-            
-    return latest_prices.to_dict()
+    ticker_list = list(tickers) if not isinstance(tickers, list) else tickers
+    prices = {}
+
+    for ticker in ticker_list:
+        try:
+            tkr = yf.Ticker(ticker)
+            df = tkr.history(period="5d", auto_adjust=False)
+
+            if df.empty:
+                continue
+
+            if 'Adj Close' in df.columns:
+                price_series = df['Adj Close']
+            else:
+                price_series = df['Close']
+
+            if isinstance(price_series, pd.DataFrame):
+                price_series = price_series.iloc[:, 0]
+
+            # LSE stocks quoted in GBX (pence) must be divided by 100 to get GBP.
+            # yfinance reports currency='GBp' for these (lowercase p = pence).
+            try:
+                if tkr.fast_info.currency == 'GBp':
+                    price_series = price_series / 100
+            except Exception:
+                pass
+
+            latest = price_series.ffill().iloc[-1]
+            if pd.notna(latest):
+                prices[ticker] = float(latest)
+
+        except Exception as e:
+            print(f"[ERROR] Failed to fetch current price for {ticker}: {e}")
+
+    return prices
 
 
 def _download_and_clean_data(tickers, start_date, end_date, prices_df=None):

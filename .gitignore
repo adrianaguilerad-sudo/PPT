@@ -1,8 +1,18 @@
-﻿# Ignorar la carpeta Results y todo su contenido
+﻿# Ignore Results and CacheData folders
 Results/
-
-# Ignorar la carpeta CacheData y todo su contenido
 CacheData/
 
-# Ignorar todos los archivos de texto
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore text files
 *.txt
+
+# Ignore Word documents
+*.doc
+*.docx
+
+# Ignore PDF files
+*.pdf

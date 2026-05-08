@@ -12,12 +12,13 @@ ETFS = [
     'ICGA.DE',  # Theme: China (iShares MSCI China UCITS ETF USD Acc)
     'VVSM.DE',  # Theme: Semiconductors (VanEck Semiconductor UCITS ETF Acc)
     'XAIX.DE',  # Theme: Artificial Intelligence (Xtrackers AI & Big Data UCITS ETF Acc)
-    'URNU.L',  # Theme: Uranium (Global X Uranium UCITS ETF Acc)
+    'URNU.DE',  # Theme: Uranium (Global X Uranium UCITS ETF Acc)
     'HTMW.DE',  # Theme: Green Hydrogen (L&G Hydrogen Economy UCITS ETF Acc)
     'ICLN',  # Theme: Green Energy (iShares Global Clean Energy UCITS ETF Acc)
     'VVMX.DE',   # Theme: Rare Earths (VanEck Rare Earth and Strategic Metals UCITS ETF Acc)
-    'SXR8.DE'    # Theme:  SP500
- #   'WQTM.DE'
+    'SXR8.DE',    # Theme:  SP500
+    'WQTM.DE',   #Quantum Computing
+    'DFNS.PA'   # Defense
 ]
 
 #WQTM.DE Theme: Quantum Computing

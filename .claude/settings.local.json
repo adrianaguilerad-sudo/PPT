@@ -4,7 +4,11 @@
       "Bash(grep -E '\\\\.\\(py|ts|tsx|js|jsx\\)$|src|app')",
       "Bash(del *)",
       "PowerShell(Remove-Item *)",
-      "Bash(python Scripts/MainScripts/BackTestPortfolio.py)"
+      "Bash(python Scripts/MainScripts/BackTestPortfolio.py)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\adria\\\\OneDrive\\\\Documentos\\\\Portfolio\" -Recurse -Force)",
+      "Bash(Select-Object -Property FullName, PSIsContainer)",
+      "Bash(Sort-Object FullName)",
+      "Bash(git rm *)"
     ]
   }
 }
