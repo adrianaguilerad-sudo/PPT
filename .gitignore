@@ -2,6 +2,10 @@
 Results/
 CacheData/
 
+# Ignore bibliography and prompts folders
+Bibliography/
+Prompts/
+
 # Ignore Python cache
 __pycache__/
 *.pyc
